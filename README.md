@@ -35,15 +35,8 @@ This project focuses on:
 ---
 
 ## 🏗️ Project Structure
-src/
-├── Main.java
-├── model/
-│   ├── Account.java
-│   ├── SavingsAccount.java
-│   └── CurrentAccount.java
-└── service/
-    ├── BankService.java
-    └── BankServiceImpl.java
+
+![Project Structure](Images/project-structure.png)
 
 ## 🚧 Project Status
 - Work in progress (WIP)
