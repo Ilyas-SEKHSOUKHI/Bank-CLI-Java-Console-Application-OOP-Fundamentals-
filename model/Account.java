@@ -23,6 +23,7 @@ public abstract class Account {
     private int id;
     private String ownerName;
     private double balance;
+    
     public Account(){
         this.id = 0;
         this.ownerName = "Null";
