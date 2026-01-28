@@ -65,10 +65,30 @@ public class BankServiceImpl implements BankService  {
             sc.nextLine();
             Account account = new SavingsAccount(interestRate,id,name,sold);
             compteName.put(id, account);
+            
         }
 
         public void createCurrentAccount() {
 
+            System.out.println("Enter your Id : ");
+                int id = sc.nextInt();
+                sc.nextLine();
+            if( compteName.containsKey(id) ) {
+                System.out.println("Id already exists");
+                return;
+            }
+            System.out.println("Enter your Name : ");
+                String name = sc.nextLine();
+            System.out.println("Enter your Sold : ");
+                Double sold = sc.nextDouble();
+                sc.nextLine();
+            System.out.println(" Enter your overdraftLimit : ");
+                Boolean overCardLimit = sc.nextBoolean();
+                sc.nextLine();
+            Account account = new CurrentAccount(id, name, sold, overCardLimit);
+            compteName.put(id, account);
+            System.out.println("Your account has been created successfuly");
+            
         }
 
         public void deposit() {
