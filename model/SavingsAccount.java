@@ -72,27 +72,27 @@ public class SavingsAccount extends Account {
             System.out.println("le client n'est pas interreser");
         else 
             System.out.println("le client est interreser");
-    }
+        }
 
     @Override
     public void deposit(double amount) {
         System.out.println("=====deposer====");
         if ( amount > 0) {
-        double somme = getBalance() + amount ;
+            double somme = getBalance() + amount ;
         }
         else 
             System.out.println("Veuillez enter une amonte > 0");
-    }
+        }
 
     @Override
     public void withdraw(double amount) {
         System.out.println("=====retirer====");
         if ( amount > 0  && amount <= getBalance() ) {
-        double somme = getBalance() - amount ;
+            double somme = getBalance() - amount ;
         }
         else 
             System.out.println("Votre solde est " + getBalance() + " enter une amonte definie ");
-    }
+        }
 }
     
     
