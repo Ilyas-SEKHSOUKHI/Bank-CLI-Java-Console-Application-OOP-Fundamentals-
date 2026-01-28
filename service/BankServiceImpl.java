@@ -30,13 +30,13 @@ Puis `BankServiceImpl implements BankService` :
 
 public class BankServiceImpl implements BankService {
 
-        public Map <String, Account> compteName ;
+        public Map <Integer, Account> compteName ;
 
         public BankServiceImpl() {
             this.compteName =  new HashMap<>();
         }
 
-        public BankServiceImpl(Map <String, Account> compteName) {
+        public BankServiceImpl(Map <Integer, Account> compteName) {
             this.compteName =  new HashMap<>(compteName);
         }
 
@@ -44,6 +44,29 @@ public class BankServiceImpl implements BankService {
             this.compteName =  new HashMap<>(other.compteName);
         }
         
+        public void createSavingsAccount() {
 
+        }
+
+        public void createCurrentAccount() {
+
+        }
+
+        public void deposit(int id, double amount) {
+
+        }
+
+        public void withdraw(int id, double amount) {
+
+        }
+
+        public void printAccount(int id) {
+
+        }
+
+        public void printAllAccounts() {
+
+        }
+        
 
 }
