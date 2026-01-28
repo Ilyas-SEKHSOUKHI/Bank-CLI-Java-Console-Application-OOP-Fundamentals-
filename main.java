@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 import model.CurrentAccount;
 import service.BankServiceImpl;
 
@@ -44,9 +43,9 @@ Dans `Main` :
             System.out.println("0. Exit");
             
             System.out.println("Enter your choice : ");
-            int A = sc.nextInt();
+            int choice = sc.nextInt();
             sc.nextLine();
-            switch (A) {
+            switch (choice) {
                 case 1:
                     Service.createCurrentAccount();
                     break;
