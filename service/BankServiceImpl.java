@@ -1,7 +1,7 @@
 package service;
 import model.Account;
 import model.SavingsAccount;
-
+import model.CurrentAccount;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.HashMap;
@@ -129,12 +129,26 @@ public class BankServiceImpl implements BankService  {
             System.out.println("Withdraw successful \n New balance: " + account.getBalance());
         }
 
-        public void printAccount(int id) {
+        public void printAccount() {
+            System.out.println(" Enter your Id ");
+            int Id = sc.nextInt();
+            sc.nextLine();
+            if(compteName.containsKey(Id)){
+                System.out.println(" Your account infos are : ");
+                Account account = compteName.get(Id);
+                System.out.println(" Id : " + account.getId());
+                System.out.println(" Name  : " + account.getOwnerName());
+                System.out.println(" Sold : " + account.getBalance());
+            }else {
+                System.out.println(" Id not found " );
+            }
 
         }
 
         public void printAllAccounts() {
-
+                for( Account account : compteName.values() ) {
+                    System.out.println(account.toString());
+                }  
         }
         
 

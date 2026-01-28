@@ -61,9 +61,9 @@ public abstract class Account {
     public abstract void withdraw(double amount);
     @Override
     public String toString(){
-        return( " Id ==> "+ id +
-            " Owner Name ==> "+ ownerName +
-            " Balance ==> " + balance
+        return( " the infos of the account : " + id + "\n" +
+            " Owner Name : "+ ownerName + "\n" +
+            " Balance : " + balance 
         );
     }
 }
