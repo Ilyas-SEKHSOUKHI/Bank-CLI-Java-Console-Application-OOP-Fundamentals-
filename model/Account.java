@@ -20,9 +20,9 @@ package model;
 ---
 */
 public abstract class Account {
-    private int id;
-    private String ownerName;
-    private double balance;
+    public int id;
+    public String ownerName;
+    public double balance;
     
     public Account(){
         this.id = 0;

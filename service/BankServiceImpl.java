@@ -1,6 +1,9 @@
 package service;
 import model.Account;
+import model.SavingsAccount;
+
 import java.util.Map;
+import java.util.Scanner;
 import java.util.HashMap;
 
 /*
@@ -28,10 +31,10 @@ Puis `BankServiceImpl implements BankService` :
 
 */
 
-public class BankServiceImpl implements BankService {
+public class BankServiceImpl implements BankService  {
 
         public Map <Integer, Account> compteName ;
-
+        Scanner sc = new Scanner(System.in);
         public BankServiceImpl() {
             this.compteName =  new HashMap<>();
         }
@@ -45,6 +48,23 @@ public class BankServiceImpl implements BankService {
         }
         
         public void createSavingsAccount() {
+            System.out.println("Entre Id : ");
+            int id = sc.nextInt();
+            sc.nextLine();
+            if(compteName.containsKey(id)){
+                System.out.println("Id Exist");
+                return;
+            }
+            System.out.println("Enter Name : ");
+            String name = sc.nextLine();
+            System.out.println("Entre Amount : ");
+            double sold = sc.nextDouble();
+            sc.nextLine();
+            System.out.println("Enter interestRate : ");
+            double interestRate = sc.nextDouble();
+            sc.nextLine();
+            Account account = new SavingsAccount(interestRate,id,name,sold);
+            compteName.put(id, account);
             
         }
 
@@ -71,12 +91,42 @@ public class BankServiceImpl implements BankService {
             
         }
 
-        public void deposit(int id, double amount) {
+        public void deposit() {
+            System.out.println("Enter Id : ");
+            int idDepot = sc.nextInt();
+            sc.nextLine();
 
+            Account account = compteName.get(idDepot);
+            if (account == null) {
+                System.out.println("Id n'existe pas");
+                return;
+            }
+
+            System.out.println("Enter amount : ");
+            double amountDepot = sc.nextDouble();
+            sc.nextLine();
+
+            account.deposit(amountDepot);
+            System.out.println("Deposit successful \n New balance: " + account.getBalance());
         }
 
-        public void withdraw(int id, double amount) {
+        public void withdraw() {
+             System.out.println("Enter Id : ");
+            int idWith = sc.nextInt();
+            sc.nextLine();
 
+            Account account = compteName.get(idWith);
+            if (account == null) {
+                System.out.println("Id n'existe pas");
+                return;
+            }
+
+            System.out.println("Enter amount : ");
+            double amountWith = sc.nextDouble();
+            sc.nextLine();
+
+            account.withdraw(amountWith);
+            System.out.println("Withdraw successful \n New balance: " + account.getBalance());
         }
 
         public void printAccount(int id) {

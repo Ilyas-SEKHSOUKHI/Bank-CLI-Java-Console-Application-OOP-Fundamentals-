@@ -26,12 +26,13 @@ public class CurrentAccount extends Account {
         this.overdraftLimit = overdraftLimit;
     }
     @Override
-    public void deposit(double amount){
+    public void  deposit(double amount){
         System.out.println("=====Deposit=====");
         if(amount<=0){
             System.out.println("Deposit amount must be greater than zero");
         }else{
             double Somme = getBalance() + amount;
+            setBalance(Somme);
         }
     }
     @Override
@@ -41,6 +42,7 @@ public class CurrentAccount extends Account {
             System.out.println("Invalid withdrawal amount");
         }else{
             double Soustraction = getBalance() - amount;
+            setBalance(Soustraction);
         }
     }
 }
