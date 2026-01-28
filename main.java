@@ -29,8 +29,16 @@ Dans `Main` :
 * valider les montants (pas négatifs)
 
     */
+   public static void printLogo() {
+    System.out.println("██████╗  █████╗ ███╗   ██╗██╗  ██╗");
+    System.out.println("██╔══██╗██╔══██╗████╗  ██║██║ ██╔╝");
+    System.out.println("██████╔╝███████║██╔██╗ ██║█████╔╝ ");
+    System.out.println("██╔══██╗██╔══██║██║╚██╗██║██╔═██╗ ");
+    System.out.println("██████╔╝██║  ██║██║ ╚████║██║  ██╗");
+    System.out.println("╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝");
+    }
     public static void main(String[] args) {
-        System.out.println("Bank");
+        printLogo();
         Scanner sc = new Scanner(System.in);
         BankServiceImpl Service = new BankServiceImpl();
         while (true) {
