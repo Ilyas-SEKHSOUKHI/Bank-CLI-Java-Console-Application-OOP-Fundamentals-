@@ -6,12 +6,12 @@ package model;
 * redéfinit `withdraw()` pour autoriser le découvert
 */
 public class CurrentAccount extends Account {
-    private boolean overdraftLimit;
+    private double overdraftLimit;
     public CurrentAccount(){
         super();
-        this.overdraftLimit = false;
+        this.overdraftLimit = 0.0;
     }
-    public CurrentAccount(int id,String ownerName,double balance,boolean overdraftLimit){
+    public CurrentAccount(int id,String ownerName,double balance,double overdraftLimit){
         super(id,ownerName,balance);
         this.overdraftLimit = overdraftLimit;
     }
@@ -19,10 +19,10 @@ public class CurrentAccount extends Account {
         super(other);
         this.overdraftLimit = other.overdraftLimit;
     }
-    public boolean getOverdraftLimit(){
+    public double getOverdraftLimit(){
         return overdraftLimit;
     }
-    public void setOverdraftLimit(boolean overdraftLimit){
+    public void setOverdraftLimit(double overdraftLimit){
         this.overdraftLimit = overdraftLimit;
     }
     @Override
