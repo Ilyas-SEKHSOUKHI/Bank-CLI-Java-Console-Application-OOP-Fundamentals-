@@ -29,7 +29,7 @@ public class CurrentAccount extends Account {
     public void deposit(double amount){
         System.out.println("=====Deposit=====");
         if(amount<=0){
-            System.out.println("Euror");
+            System.out.println("Deposit amount must be greater than zero");
         }else{
             double Somme = getBalance() + amount;
         }
@@ -37,8 +37,8 @@ public class CurrentAccount extends Account {
     @Override
     public void withdraw(double amount){
         System.out.println("=====Withdraw=====");
-        if (amount<=0 && amount>getBalance()){
-            System.out.println("Euror");
+        if (amount<=0 || amount>getBalance()){
+            System.out.println("Invalid withdrawal amount");
         }else{
             double Soustraction = getBalance() - amount;
         }

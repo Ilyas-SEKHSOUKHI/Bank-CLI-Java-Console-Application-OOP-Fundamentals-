@@ -69,10 +69,10 @@ public class SavingsAccount extends Account {
 
     public void applyInterest() {
         if ( interestRate < 10 ) 
-            System.out.println("le client n'est pas interreser");
+            System.out.println("The client is not interested");
         else 
-            System.out.println("le client est interreser");
-        }
+            System.out.println("The client is interested");
+    }
 
     @Override
     public void deposit(double amount) {
@@ -81,18 +81,18 @@ public class SavingsAccount extends Account {
             double somme = getBalance() + amount ;
         }
         else 
-            System.out.println("Veuillez enter une amonte > 0");
-        }
+            System.out.println("Deposit amount must be greater than zero");
+    }
 
     @Override
     public void withdraw(double amount) {
         System.out.println("=====retirer====");
-        if ( amount > 0  && amount <= getBalance() ) {
+        if ( amount > 0  || amount <= getBalance() ) {
             double somme = getBalance() - amount ;
         }
         else 
-            System.out.println("Votre solde est " + getBalance() + " enter une amonte definie ");
-        }
+            System.out.println("Invalid withdrawal amount");
+    }
 }
     
     
