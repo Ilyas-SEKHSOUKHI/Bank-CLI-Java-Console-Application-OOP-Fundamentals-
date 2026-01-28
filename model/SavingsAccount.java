@@ -75,23 +75,24 @@ public class SavingsAccount extends Account {
     }
 
     @Override
-    public void deposit(double amount) {
-        System.out.println("=====deposer====");
-        if ( amount > 0) {
-            double somme = getBalance() + amount ;
-        }
-        else 
+    public void  deposit(double amount){
+        System.out.println("=====Deposit=====");
+        if(amount<=0){
             System.out.println("Deposit amount must be greater than zero");
-    }
-
-    @Override
-    public void withdraw(double amount) {
-        System.out.println("=====retirer====");
-        if ( amount > 0  || amount <= getBalance() ) {
-            double somme = getBalance() - amount ;
+        }else{
+            double Somme = getBalance() + amount;
+            setBalance(Somme);
         }
-        else 
+    }
+    @Override
+    public void withdraw(double amount){
+        System.out.println("=====Withdraw=====");
+        if (amount<=0 || amount>getBalance()){
             System.out.println("Invalid withdrawal amount");
+        }else{
+            double Soustraction = getBalance() - amount;
+            setBalance(Soustraction);
+        }
     }
 }
     
