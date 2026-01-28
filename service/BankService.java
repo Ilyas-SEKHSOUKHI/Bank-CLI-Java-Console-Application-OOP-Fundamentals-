@@ -12,8 +12,8 @@ Crée une interface `BankService` qui définit les opérations :
 interface BankService {
     public void createSavingsAccount();
     public void createCurrentAccount();
-    public void deposit(String id,double amount);
-    public void withdraw(String id,double amonte);
-    public void printAccount(String id);
+    public void deposit(int id,double amount);
+    public void withdraw(int id,double amonte);
+    public void printAccount(int id);
     public void printAllAccounts();
 }
