@@ -14,6 +14,6 @@ interface BankService {
     public void createCurrentAccount();
     public void deposit();
     public void withdraw();
-    public void printAccount(int id);
+    public void printAccount();
     public void printAllAccounts();
 }
