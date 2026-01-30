@@ -1,77 +1,109 @@
-# Bank Application – UI + Database Version
+# 🏦 Bank Application – UI & Database Version
 
-## 📌 Description
-Ce dépôt contient une version améliorée du projet **Bank Application**.
+## 📌 Overview
 
-Contrairement aux autres repositories du projet, cette version introduit :
-- une **interface graphique (Swing)**
-- une **base de données (SQLite)**
-- une architecture plus structurée avec **DAO** et **Database**
+This repository contains an **enhanced version of the Bank Application project**.
 
-L’objectif est de séparer clairement :
-- l’interface utilisateur
-- la logique métier
-- l’accès aux données
+Unlike the other versions of the project, this one introduces:
 
----
+* a **graphical user interface (Swing)**
+* a **relational database (SQLite)**
+* a cleaner, layered architecture using **DAO** and **Database** components
 
-## 🚀 Fonctionnalités
-- Créer un compte bancaire (épargne ou courant)
-- Effectuer un dépôt
-- Effectuer un retrait
-- Afficher un compte
-- Lister tous les comptes
-- Interface graphique avec Swing
-- Persistance des données via SQLite
+The main goal is to clearly separate:
+
+* **User Interface**
+* **Business Logic**
+* **Data Access**
+
+This structure is closer to what is used in real-world Java applications.
 
 ---
 
-## 🗂️ Structure du projet
+## 🚀 Features
+
+* Create a bank account (Savings or Checking)
+* Deposit money
+* Withdraw money
+* Display account details
+* List all accounts
+* Graphical user interface using **Swing**
+* Data persistence using **SQLite**
+
+---
+
+## 🗂️ Project Structure
 
 ![Project Structure](Images/project-structure-ui-bd.png)
----
 
-## 🆕 Différences avec les autres repositories
+The project follows a **layered architecture**:
 
-Les autres versions du projet :
-- utilisent uniquement la **console (CLI)**
-- stockent les données en mémoire (Map / List)
-- ne contiennent pas de base de données
-- n’ont pas d’interface graphique
-
-👉 **Ce repository ajoute :**
-- Swing (UI graphique)
-- SQLite (persistance des données)
-- DAO (séparation accès BD / logique métier)
-- Architecture plus proche d’un projet réel
+* **UI layer**: Swing interfaces
+* **Service layer**: business logic
+* **DAO layer**: database access
+* **Database layer**: SQLite connection and configuration
 
 ---
+
+## 🆕 Differences from Other Versions
+
+Other repositories of this project:
+
+* use **console-based (CLI)** interaction
+* store data **in memory** (Map / List)
+* do **not** use a database
+* do **not** include a graphical interface
+
+👉 **This version adds:**
+
+* Swing-based GUI
+* SQLite database for persistence
+* DAO pattern for data access
+* Clear separation of concerns
+* A structure closer to a real enterprise application
+
+---
+
 ## 🚧 Project Status
 
 ⚠️ **This project is currently under development.**
 
-The following features are still in progress:
-- Full database integration
-- Final DAO implementation
-- UI–Service–DAO wiring
-- Additional validations and error handling
+The following parts are still in progress:
 
-The structure and architecture are already in place,  
-but some parts are not fully implemented yet.
+* Complete database integration
+* Final DAO implementations
+* Full UI ↔ Service ↔ DAO wiring
+* Additional validations and error handling
 
-
-## 🛠️ Technologies utilisées
-- Java
-- Swing
-- JDBC
-- SQLite
+The overall architecture and structure are already in place,
+but some features are not fully implemented yet.
 
 ---
 
-## 🎯 Objectif pédagogique
-Ce projet sert à pratiquer :
-- la POO (héritage, polymorphisme)
-- les interfaces et implémentations
-- l’architecture en couches
-- la connexion Java ↔ Base de données
-- la séparation UI / Service / DAO
+## 🛠️ Technologies Used
+
+* **Java**
+* **Swing**
+* **JDBC**
+* **SQLite**
+
+---
+
+## 🎯 Educational Purpose
+
+This project was built to practice and reinforce:
+
+* Object-Oriented Programming (inheritance, polymorphism)
+* Interfaces and implementations
+* Layered architecture
+* Java ↔ Database connectivity (JDBC)
+* Separation of concerns (UI / Service / DAO)
+
+---
+
+## 📌 Notes
+
+This repository is intended for **learning and demonstration purposes**.
+It showcases the evolution of the same project from a simple console-based application to a more realistic, layered Java application with a graphical interface and database persistence.
+
+
