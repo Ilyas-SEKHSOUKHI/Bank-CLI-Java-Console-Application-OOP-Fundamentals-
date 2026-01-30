@@ -1,0 +1,3 @@
+ACCOUNT(id_account PK, owner_name, balance, created_at)
+SAVINGS_ACCOUNT(id_account PK/FK→ACCOUNT, interest_rate)
+CURRENT_ACCOUNT(id_account PK/FK→ACCOUNT, overdraft_limit)
